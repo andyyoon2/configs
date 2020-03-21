@@ -1,0 +1,24 @@
+# https://starship.rs/config/
+
+# Don't print a new line at the start of the prompt
+# add_newline = false
+
+[character]
+symbol = " " #⏾►☻⚡ﳟ
+error_symbol = " " #✗☠
+use_symbol_for_status = true
+
+[env_var]
+variable = "com_ej_alumni_customer"
+
+[git_branch]
+symbol = "שׂ " #שׂ
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[time]
+disabled = false
