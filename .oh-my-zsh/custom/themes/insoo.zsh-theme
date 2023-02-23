@@ -10,11 +10,7 @@ node_version() {
   echo "%{$fg[green]%}⬡ $(nvm current)%{$reset_color%}"
 }
 
-customer_output() {
-  echo "with $(customer)"
-}
-
-PROMPT='$(directory)%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%} $(customer_output) $(node_version)
+PROMPT='$(directory)%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%} $(node_version)
 %* $(prompt) '
 # %{$fg_bold[green]%}%p # not sure what %p does
 # RPROMPT='%{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%} %T'

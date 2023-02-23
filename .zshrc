@@ -71,11 +71,9 @@ ZSH_THEME="insoo"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git jira)
+plugins=(git)
 
 # Plugin config
-export JIRA_URL="https://entjungle.atlassian.net/"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -103,12 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias portal="cd ~/Documents/ea/alumni/ui/WebContent-dev/portal"
-alias admin3="cd ~/Documents/ea/alumni/ui/WebContent-dev/admin3"
-alias signup="cd ~/Documents/ea/alumni/ui/WebContent-dev/signup"
-alias ngx="cd ~/Documents/ea/alumni/ui/WebContent-dev/ngx"
-alias ap="cd ~/Documents/ea/AccessPassport-Frontend"
-alias ssr="cd ~/Documents/ea/AlumniExternalPages"
 alias gdev="g checkout develop && g pull"
 alias gs="g status"
 alias nvimconf="nvim ~/.config/nvim/init.vim"
@@ -122,15 +114,8 @@ export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Setting EA customer ENV var
-function customer() {
-  if [[ $# -eq 0 ]]; then
-    echo $com_ej_alumni_customer
-  else
-    export com_ej_alumni_customer=$1
-  fi
-}
 
 # VIM default editor
 export EDITOR=nvim
